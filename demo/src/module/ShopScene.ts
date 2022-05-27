@@ -22,9 +22,13 @@ class ShopScene extends rose.SubModule {
             }
         })
     }
-
+    public bnTest: eui.Button;
     _afterAnalysisSkin(): void {
         console.log('解析皮肤后', this.skinNameIdentify);
+
+        this.bnTest.addEventListener(egret.TouchEvent.TOUCH_TAP, () => {
+            console.log("点击按钮");
+        }, this);
     }
 }
 
